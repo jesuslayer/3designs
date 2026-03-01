@@ -1,0 +1,120 @@
+:root {
+  --bg-primary: #080b12;
+  --bg-secondary: #101625;
+  --text-primary: #ffffff;
+  --text-secondary: #b6bfd6;
+  --neon: #00ff9d;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  padding-top: 72px;
+}
+
+.text-neon {
+  color: var(--neon);
+}
+
+.bg-neon {
+  background-color: var(--neon) !important;
+}
+
+.btn-neon {
+  background-color: var(--neon);
+  border: none;
+  color: #07110d;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-neon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(0, 255, 157, 0.4);
+  color: #07110d;
+}
+
+.hero-section {
+  min-height: calc(100vh - 72px);
+  background: radial-gradient(circle at 85% 20%, rgba(0, 255, 157, 0.15), transparent 35%), var(--bg-primary);
+}
+
+.hero-card,
+.pain-card,
+.feature-card,
+.testimonial-card,
+.pricing-card,
+.contact-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover,
+.pain-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 255, 157, 0.7);
+}
+
+.section-padding {
+  padding: 90px 0;
+}
+
+.bg-soft-dark {
+  background-color: #0b101a;
+}
+
+.counter-box {
+  min-width: 80px;
+  padding: 12px 10px;
+  border: 1px solid rgba(0, 255, 157, 0.4);
+  border-radius: 12px;
+  background: rgba(0, 255, 157, 0.08);
+}
+
+.counter-box span {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--neon);
+}
+
+.counter-box small {
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+.accordion-item,
+.accordion-button,
+.accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: var(--text-primary);
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 255, 157, 0.25);
+}
+
+.form-control,
+.form-control:focus {
+  background-color: #0d1320;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(0, 255, 157, 0.2);
+}
+
+@media (max-width: 767px) {
+  .section-padding {
+    padding: 70px 0;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding-top: 1.5rem;
+  }
+}
