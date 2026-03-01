@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Domina Python desde cero con un curso online de 120 horas, proyectos reales, mentoría y certificado profesional." />
+  <meta name="keywords" content="curso Python principiantes, aprender programación, Python desde cero, curso online Python" />
+  <meta name="author" content="Python Pro Academy" />
+  <meta property="og:title" content="Python Pro Academy | Curso Online de Python para Principiantes" />
+  <meta property="og:description" content="Conviértete en desarrollador Python con 120 horas de formación práctica y proyectos reales." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://placehold.co/1200x630/0b0d12/d4af37?text=Python+Pro+Academy" />
+  <title>Curso Online de Python para Principiantes | Python Pro Academy</title>
+  <style>
+    :root {
+      --black: #0b0d12;
+      --gold: #d4af37;
+      --white: #ffffff;
+      --accent: #00d1ff;
+      --muted: #aab2c3;
+      --card: #121723;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container { width: min(1120px, 92%); margin-inline: auto; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.95rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(120deg, var(--gold), #f0cf63);
+      color: #111;
+      box-shadow: 0 8px 24px rgba(212, 175, 55, 0.35);
+    }
+
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 14px 28px rgba(212, 175, 55, 0.45); }
+
+    .btn-secondary {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: rgba(0, 209, 255, 0.08);
+    }
+
+    .btn-secondary:hover { transform: translateY(-2px); background: rgba(0, 209, 255, 0.14); }
+
+    .section { padding: 4.5rem 0; }
+    .section-title { font-size: clamp(1.65rem, 2.5vw, 2.35rem); margin-bottom: 0.8rem; }
+    .section-subtitle { color: var(--muted); margin-bottom: 2rem; }
+
+    .hero {
+      position: relative;
+      padding: 5.5rem 0 4rem;
+      background: radial-gradient(circle at 80% 5%, rgba(0, 209, 255, 0.13), transparent 35%),
+                  radial-gradient(circle at 15% 25%, rgba(212, 175, 55, 0.2), transparent 35%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: 0.82rem;
+      color: var(--accent);
+      border: 1px solid rgba(0, 209, 255, 0.4);
+      border-radius: 999px;
+      padding: 0.35rem 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3.7rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p { color: #dbe2f2; max-width: 60ch; }
+    .hero-actions { margin-top: 1.4rem; display: flex; flex-wrap: wrap; gap: 0.8rem; }
+
+    .hero-card {
+      background: linear-gradient(180deg, #151d2f, #0f1421);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      padding: 1rem;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card ul { list-style: none; margin-top: 1rem; display: grid; gap: 0.6rem; }
+    .hero-card li { color: #d8deec; }
+
+    .problem,
+    .testimonials,
+    .faq { background: #0f1420; }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .card:hover { transform: translateY(-4px); border-color: rgba(0, 209, 255, 0.45); }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: rgba(212,175,55,0.15);
+      color: var(--gold);
+      font-weight: bold;
+      margin-bottom: 0.7rem;
+    }
+
+    .stats {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+    }
+
+    .stat {
+      background: #12192a;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 0.85rem;
+      text-align: center;
+    }
+
+    .stat strong { display: block; color: var(--gold); font-size: 1.2rem; }
+    .logos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 1rem 0 1.5rem;
+    }
+
+    .logos img {
+      width: 140px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,.1);
+      background: #fff;
+    }
+
+    .price-box {
+      max-width: 640px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 1.6rem;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.12);
+      background: linear-gradient(180deg, #151d2f, #0b0f18);
+      box-shadow: var(--shadow);
+    }
+
+    .old-price { color: #ff8f8f; text-decoration: line-through; }
+    .new-price { font-size: clamp(2rem, 6vw, 3rem); font-weight: 800; color: var(--gold); margin: 0.4rem 0; }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      padding: 0.9rem 0;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: transparent;
+      color: var(--white);
+      border: none;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .faq-answer { color: #ced6e8; max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+
+    footer {
+      padding: 2rem 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.7rem; }
+
+    /* Animación fade-in al hacer scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (min-width: 768px) {
+      .hero-grid { grid-template-columns: 1.05fr 0.95fr; }
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+      .stats { grid-template-columns: repeat(4, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="pill">Edición limitada 2026 · 35% OFF + mentoría en vivo</span>
+        <h1>Aprende Python desde cero y construye proyectos reales en 12 semanas.</h1>
+        <p>
+          Curso online intensivo con <strong>120 horas de video HD</strong>, plantillas descargables,
+          ejercicios guiados y soporte de mentores. Diseñado para principiantes absolutos que quieren
+          empezar una carrera tech o automatizar procesos en su trabajo.
+        </p>
+        <div class="hero-actions">
+          <a href="#precios" class="btn btn-primary">Comprar ahora</a>
+          <a href="#oferta" class="btn btn-secondary">Reservar tu plaza</a>
+        </div>
+      </div>
+
+      <aside class="hero-card reveal">
+        <img src="https://placehold.co/700x420/101722/FFFFFF?text=Panel+del+Curso+Python+Pro" alt="Vista previa del panel del curso de Python" />
+        <ul>
+          <li>✅ 18 módulos paso a paso, desde fundamentos hasta APIs.</li>
+          <li>✅ 12 proyectos reales para tu portafolio profesional.</li>
+          <li>✅ Certificado digital verificable al completar el programa.</li>
+        </ul>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="section problem reveal" id="problema">
+      <div class="container">
+        <h2 class="section-title">Si no aprendes con estructura, terminas abandonando otra vez.</h2>
+        <p class="section-subtitle">
+          Saltar de tutorial en tutorial te hace perder meses. Mientras tanto, otras personas con menos talento,
+          pero mejor método, ya están consiguiendo empleos, clientes o mejores condiciones.
+        </p>
+        <div class="grid-3">
+          <article class="card">
+            <div class="icon">1</div>
+            <h3>Desorden total</h3>
+            <p>Contenido suelto, desactualizado y sin hoja de ruta para principiantes.</p>
+          </article>
+          <article class="card">
+            <div class="icon">2</div>
+            <h3>Bloqueos constantes</h3>
+            <p>Te quedas atascado en errores básicos y no tienes a quién preguntar.</p>
+          </article>
+          <article class="card">
+            <div class="icon">3</div>
+            <h3>Cero resultados</h3>
+            <p>Sin proyectos reales, tu CV se ve vacío y no puedes demostrar habilidades.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="solucion">
+      <div class="container">
+        <h2 class="section-title">La ruta completa para convertirte en desarrollador Python junior.</h2>
+        <p class="section-subtitle">Metodología práctica enfocada en ejecución, feedback y resultados medibles.</p>
+        <div class="grid-3">
+          <article class="card">
+            <div class="icon">⚙</div>
+            <h3>Contenido de 120h</h3>
+            <p>Lecciones breves, claras y progresivas para aprender sin abrumarte.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🚀</div>
+            <h3>Proyectos reales</h3>
+            <p>Automatización, scraping, análisis de datos y APIs para destacar en entrevistas.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🎯</div>
+            <h3>Mentoría semanal</h3>
+            <p>Sesiones en vivo para resolver dudas y acelerar tu avance sin fricción.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials reveal" id="testimonios">
+      <div class="container">
+        <h2 class="section-title">Resultados que hablan por sí solos.</h2>
+        <p class="section-subtitle">Más de 4.800 alumnos ya transformaron su perfil profesional.</p>
+
+        <div class="logos" aria-label="Empresas donde trabajan alumnos">
+          <img src="https://placehold.co/280x120/ffffff/1a1a1a?text=Globant" alt="Logo de Globant" />
+          <img src="https://placehold.co/280x120/ffffff/1a1a1a?text=Mercado+Libre" alt="Logo de Mercado Libre" />
+          <img src="https://placehold.co/280x120/ffffff/1a1a1a?text=BBVA" alt="Logo de BBVA" />
+        </div>
+
+        <div class="grid-3">
+          <blockquote class="card">“En 3 meses pasé de cero a mi primer trabajo freelance en automatización.” — <strong>Laura M.</strong></blockquote>
+          <blockquote class="card">“Los proyectos me dieron confianza para superar entrevistas técnicas.” — <strong>Gabriel R.</strong></blockquote>
+          <blockquote class="card">“Recuperé la inversión con mi primer cliente en solo 2 semanas.” — <strong>Sofía T.</strong></blockquote>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><strong>4.8K+</strong><span>Alumnos activos</span></div>
+          <div class="stat"><strong>93%</strong><span>Tasa de finalización</span></div>
+          <div class="stat"><strong>4.9/5</strong><span>Valoración media</span></div>
+          <div class="stat"><strong>12</strong><span>Proyectos guiados</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="precios">
+      <div class="container">
+        <h2 class="section-title" style="text-align:center;">Oferta especial por lanzamiento</h2>
+        <p class="section-subtitle" style="text-align:center;">Cupos limitados para garantizar soporte personalizado.</p>
+        <div class="price-box" id="oferta">
+          <p class="old-price">Antes: 599€</p>
+          <p class="new-price">Ahora: 389€</p>
+          <p>Pago único · acceso inmediato · actualizaciones incluidas de por vida</p>
+          <div class="hero-actions" style="justify-content:center; margin-top:1rem;">
+            <a href="#" class="btn btn-primary">Acceder al curso</a>
+            <a href="#" class="btn btn-secondary">Reserva tu plaza</a>
+          </div>
+          <p style="margin-top: 0.8rem; color: var(--muted);">⏰ La promoción termina en <strong>48 horas</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq reveal" id="faq">
+      <div class="container">
+        <h2 class="section-title">Garantía total + Preguntas frecuentes</h2>
+        <p class="section-subtitle">Prueba el programa sin riesgo durante 14 días.</p>
+
+        <div class="card" style="margin-bottom:1rem;">
+          <h3>🛡 Garantía de satisfacción</h3>
+          <p>Si el curso no cumple tus expectativas, te devolvemos el 100% del dinero en los primeros 14 días.</p>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">¿Necesito experiencia previa en programación?<span>+</span></button>
+          <div class="faq-answer"><p>No. El curso está diseñado para principiantes absolutos y empieza desde los fundamentos.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Cuánto tiempo necesito por semana?<span>+</span></button>
+          <div class="faq-answer"><p>Con 5 a 7 horas semanales puedes completar el programa en 12 semanas sin prisas.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">¿Incluye certificado al finalizar?<span>+</span></button>
+          <div class="faq-answer"><p>Sí, obtienes un certificado digital verificable ideal para LinkedIn y tu CV.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Python Pro Academy. Todos los derechos reservados.</p>
+      <nav class="footer-links" aria-label="Enlaces legales y de ayuda">
+        <a href="#">Política de privacidad</a>
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Soporte</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Animaciones de aparición por scroll con Intersection Observer
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    reveals.forEach(item => observer.observe(item));
+
+    // FAQ colapsables
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        const isOpen = answer.style.maxHeight;
+
+        document.querySelectorAll('.faq-answer').forEach(a => a.style.maxHeight = null);
+        document.querySelectorAll('.faq-question span').forEach(icon => icon.textContent = '+');
+
+        if (!isOpen) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+          button.querySelector('span').textContent = '−';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
