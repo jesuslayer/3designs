@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Área Premium | TradingBots Pro{% endblock %}
+
+{% block content %}
+<section class="py-5 mt-5">
+  <div class="container py-4">
+    <div class="dark-card p-5" data-aos="fade-up">
+      <h1 class="mb-3">Bienvenido al contenido premium 🚀</h1>
+      <p class="lead mb-4">Acceso activo para: <strong>{{ email }}</strong></p>
+      <p>
+        Aquí podrás descargar bots, revisar guías avanzadas y acceder a soporte prioritario.
+      </p>
+      <ul>
+        <li>Pack de estrategias momentum + mean reversion</li>
+        <li>Plantillas de backtesting</li>
+        <li>Roadmap privado de actualizaciones</li>
+      </ul>
+
+      <div class="mt-4 d-flex gap-2 flex-wrap">
+        <a href="{{ url_for('index') }}" class="btn btn-outline-light">Volver al inicio</a>
+        <form action="{{ url_for('logout') }}" method="post">
+          <button class="btn btn-neon" type="submit">Cerrar sesión premium</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
